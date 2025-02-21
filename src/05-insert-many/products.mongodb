@@ -1,0 +1,30 @@
+use("platzi_store")
+
+db.products.drop() // borra todos los documentos de toda una coleccion
+
+db.products.insertMany([ //inserta varios documentos
+  {
+    _id: 1,
+    name: "Prodcut 1",
+    price: 100
+  },
+  {
+    _id: 2,
+    name: "Prodcut 2",
+    price: 20
+  },
+  {
+    _id: 3,
+    name: "Prodcut 3",
+    price: 120
+  },
+  {
+    _id: 4,
+    name: "Prodcut 4",
+    price: 120
+  }
+], {
+  ordered: false  // inserta documentos con id duplicados, asi no se queda pegado el mongo
+})
+
+db.products.find()
