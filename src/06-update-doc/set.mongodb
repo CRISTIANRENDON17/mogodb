@@ -1,0 +1,17 @@
+use("platzi_store")
+
+// el metodo set actualiza uo agrega nuevos parametros con base a un ID
+db.products.updateOne(
+    //query
+    {_id : 2}, 
+    // change => opetators
+   {
+        $set:{
+            name:'Change Name', //Edicion
+            price: 3000, //Edicion
+            tags:['A','B','C'] //Nuevo parametro
+        }
+   }
+)
+
+db.products.find()

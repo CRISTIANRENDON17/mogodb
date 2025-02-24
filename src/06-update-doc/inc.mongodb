@@ -1,0 +1,16 @@
+use("platzi_store")
+
+// Este incrementa
+db.products.updateOne(
+    //query
+    {_id : 2}, 
+    // change => opetators
+   {
+        $inc:{
+            price: 100, // incremento en 100
+   
+        }
+   }
+)
+
+db.products.find()

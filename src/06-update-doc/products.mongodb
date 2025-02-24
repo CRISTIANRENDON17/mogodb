@@ -22,7 +22,13 @@ db.products.insertMany([ //inserta varios documentos
     _id: 4,
     name: "Prodcut 4",
     price: 120
+  },
+  {
+    name: "Prodcut 5",
+    price: 120
   }
-])
+], {
+  ordered: false  // inserta documentos con id duplicados, asi no se queda pegado el mongo
+})
 
 db.products.find()
