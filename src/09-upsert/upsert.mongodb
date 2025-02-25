@@ -1,0 +1,15 @@
+use("platzi_store")
+
+// Si no existe, lo crea con estos datos sensor, date, readings
+// si EXISTE lo actualiza upsert
+
+db.iot.updateOne({
+  sensor: "A001",
+  date: "2022-01-04",
+}, {
+  $push: {
+    readings: 124346
+  }
+}, {
+  upsert: true
+})

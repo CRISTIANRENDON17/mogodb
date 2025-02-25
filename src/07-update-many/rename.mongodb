@@ -7,8 +7,8 @@ db.zips.updateMany(
     {city:"CLEVELAND"},
     //update - operations
     {
-        $set:{
-            myAttr:"Hola"
+        $rename:{
+            myAttr:"my_data"
         }
     }
 )
